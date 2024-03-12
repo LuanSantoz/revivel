@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/index.js"></script>
+    <title>Revivel</title>
+</head>
+<body onload="loadTasks()">
+    <header class="header-container">
+        <h1>DAYLE QUESTS</h1>
+        <span class="tasks-stats">
+            <p class="tasks-stats-data">0 / 0</p>
+        </span>
+    </header>
+
+    <main class="tasks-container"></main>
+
+    <dialog class="tasks-modal">
+        <button class="close-modal">X</button>
+        <div class="tasks-inp-container">
+            <div class="tasks-ipts">
+                <input type="text" name="task-name" class="task-name-inp" placeholder="Task Name">
+            </div>
+            <div class="tasks-btns">
+                <button type="button" class="create-task-btn">Create Task</button>
+            </div>
+        </div>
+    </dialog>
+
+    <aside class="btns-container">
+        <button class="open-btns-menu">OPEN</button>
+        <button class="btns open-modal">CREATE</button>
+        <button class="btns edit-task-btn">EDIT</button>
+        <button class="btns remove-task-menu">REMOVE</button>
+    </aside>
+
+    <menu class="nav-menu">
+        <ul class="nav-list">
+            <li><a href="" class="goal-page">GOAL</a></li>
+            <li><a href="" class="home-page">HOME</a></li>
+            <li><a href="" class="user-page">USER</a></li>
+        </ul>
+    </menu>
+</body>
+</html>

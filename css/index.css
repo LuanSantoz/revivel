@@ -1,0 +1,228 @@
+@charset "UTF-8";
+
+:root {
+    --bg-color: #2d2d2d;
+    --bg-color2: #3e3e3e;
+    --bg-color3: #4f4f4f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: normal 1.1rem Arial, Verdana, sans-serif;
+}
+
+ul, li, a {
+    text-decoration: none;
+    list-style: none;
+    color: #fff;
+}
+
+button {
+    height: 30px;
+    font: bold .7rem Arial;
+    letter-spacing: .06rem;
+    color: #fff;
+    background: var(--bg-color2);
+    text-shadow: 2px 2px 5px #00000088;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+body {
+    height: 100vh;
+    background: var(--bg-color);
+    color: #fff;
+    overflow: hidden;
+}
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 12%;
+    padding:0 20px;
+}
+
+.tasks-stats {
+    border: solid;
+}
+
+.tasks-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .4rem;
+
+    height: 65%;
+    width: 90%;
+    padding: 20px 0;
+    margin: auto;
+    background: var(--bg-color2);
+    border-radius: 20px;
+    overflow: auto;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 0 auto;
+
+    height: 50px;
+    width: 90%;
+    padding: 0 10px;
+    background: var(--bg-color);
+    border-radius: 10px;
+}
+
+@keyframes close-menu {
+    0% {
+        width: 100vh;
+    }
+
+    100% {
+        width: 80px;
+    }
+}
+
+.btns-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .8rem;
+
+    height: 50px;
+    width: 80px;
+    margin-top: 15px;
+    border-right: solid;
+    border-radius: 20px;
+
+    overflow: hidden;
+    animation: close-menu .2s forwards;
+}
+
+.open-btns-menu {
+    height: 30px;
+    margin-left: 10px;
+}
+
+@keyframes hidden-btns {
+    0% {
+        visibility: visible;
+    }
+
+    100% {
+        flex: 1 2 60px;
+        visibility: hidden;
+    }
+}
+
+.btns {
+    height: 30px;
+
+    animation: hidden-btns .4s forwards;
+}
+
+@keyframes open-menu {
+    0% {
+        width: 80px;
+    }
+
+    100% {
+        width: 100vw;
+    }
+}
+
+.btns-container.open {
+    animation: open-menu .4s forwards;
+}
+
+@keyframes show-btns {
+    0% {
+        visibility: hidden;
+    }
+
+    100% {
+        flex: 1 2 60px;
+        visibility: visible;
+    }
+}
+
+.btns-container.open .btns {
+    animation: show-btns .4s forwards;
+}
+
+.tasks-modal {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+
+    height: 150px;
+    width: 260px;
+    background: var(--bg-color);
+    border: none;
+    border-radius: 10px;
+
+    transform: translate(-50%);
+}
+
+::backdrop {
+    background-color: #00000066;
+}
+
+.close-modal{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    height: 25px;
+    width: 30px;
+}
+
+.tasks-inp-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    height: 100%;
+}
+
+.tasks-inps {
+    display: flex;
+    flex-direction: column;
+}
+
+.task-name-inp {
+    height: 34px;
+    width: 90%;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.task-check {
+    height: 30px;
+    width: 30px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.task-check.clicked {
+    background: var(--bg-color3);
+}
+
+.task-name.finish {
+    text-decoration: line-through;
+    color: var(--bg-color3);
+}
