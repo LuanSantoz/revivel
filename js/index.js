@@ -104,12 +104,10 @@ const closeTaskModal = document.querySelector(".close-modal");
 
 openTaskModal.addEventListener('click', () => {
     tasksModal.showModal();
-    console.log("ok");
 });
 
 closeTaskModal.addEventListener('click', () => {
     tasksModal.close();
-    console.log("ok");
 });
 
 // create and save task

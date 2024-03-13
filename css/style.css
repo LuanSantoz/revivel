@@ -29,7 +29,7 @@ ul, li, a {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: solid 6px var(--bg-color2);
+    border-top: solid 6px var(--bg-color3);
 }
 
 .nav-list li {
@@ -48,5 +48,5 @@ ul, li, a {
 }
 
 .nav-list a:hover {
-    background: var(--bg-color2);
+    background: var(--bg-color3);
 }
