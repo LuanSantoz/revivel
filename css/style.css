@@ -21,7 +21,8 @@ ul, li, a {
     position: absolute;
     bottom: 0;
 
-    height: 10%;
+    height: 8%;
+    background: var(--bg-color);
 }
 
 .nav-list {
