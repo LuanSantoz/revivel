@@ -21,7 +21,7 @@ ul, li, a {
     position: absolute;
     bottom: 0;
 
-    height: 8%;
+    height: 10%;
     background: var(--bg-color);
 }
 
