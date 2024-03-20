@@ -92,6 +92,8 @@ hr {
     height: 22vh;
     width: 100vw;
     background: transparent;
+    overflow: hidden;
+    
     transition: 0s .6s;
 }
 
