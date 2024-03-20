@@ -168,7 +168,7 @@ hr {
 }
 
 .tasks-modal.open .tasks-container {
-    height: 88vh;
+    height: 85vh;
     transition: .3s;
 }
 
