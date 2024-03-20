@@ -36,7 +36,7 @@ main {
     height: 89vh;
     padding: 0 20px;
     margin: auto;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .header-container {
@@ -211,6 +211,10 @@ hr {
     border-radius: 15px;
 }
 
+.tasks-container hr {
+    visibility: hidden;
+}
+
 .tasks {
     display: flex;
     flex-direction: column;
@@ -225,6 +229,10 @@ hr {
 }
 
 .tasks-modal.open .add-task {
+    visibility: visible;
+}
+
+.tasks-modal.open .tasks-container hr {
     visibility: visible;
 }
 
