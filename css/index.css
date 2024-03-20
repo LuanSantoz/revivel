@@ -105,8 +105,8 @@ hr {
 
 .open-tasks-modal {
     position: absolute;
-    left: 5px;
-    bottom: 70px;
+    left: 4%;
+    bottom: 12vh;
 
     display: flex;
     align-items: center;
@@ -131,7 +131,7 @@ hr {
 
 .modal-btns {
     position: absolute;
-    left: 5px;
+    left: 4%;
     bottom: 90vh;
 
     visibility: hidden;
@@ -140,14 +140,14 @@ hr {
 }
 
 .tasks-modal.open .edit-task-btn {
-    left: calc(100vw - 75vw);
+    left: 24%;
     visibility: visible;
 
     transition: .3s .3s;
 }
 
 .tasks-modal.open .open-rt-modal {
-    left: calc(100vw - 50vw);
+    left: 44%;
     visibility: visible;
 
     transition: .3s .4s;
