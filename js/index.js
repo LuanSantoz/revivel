@@ -1,176 +1,95 @@
-// var, functions ands class
+// var, class and func
 
-const taskNameInp = document.querySelector(".task-name-inp");
-const tasksContainer = document.querySelector(".tasks-container");
+const tasksContainer = document.querySelector(".tasks");
 const createTaskBtn = document.querySelector(".create-task-btn");
-const taskStats = document.querySelector(".tasks-stats-data")
-let taskStatus = false;
-let taskCount = 0;
 
-// db and load data
+class Task {
+    constructor(taskName, taskType) {
+        this.taskName = taskName;
+        this.taskType = taskType;
+    };
 
-let dbTasksStats = [];
-let dbTasks = [];
-
-// load tasks stats
-
-function loadTasksStats() {
-    let taskComplete = 0;
-    for (let index = 0; index < dbTasks.length; index++) {
-        if (dbTasks[index][2] === true) {
-            taskComplete++
-        }
-    }
-    taskStats.innerHTML = `${taskComplete} / ${taskCount}`
-}
-
-// load tasks
-if (localStorage.dbtasks) {
-    dbTasks = JSON.parse(localStorage.dbtasks)
-    console.log(dbTasks);
-}
-
-function loadTasks() {
-    for (let index = 0; index < dbTasks.length; index++) {
+    createTask() {
         const task = document.createElement('div');
         const taskName = document.createElement('p');
         const taskCheck = document.createElement('span');
-        let taskComp = taskCount + 1
-    
+
         task.classList.add("task");
-        taskName.classList.add("task-name");
         taskCheck.classList.add("task-check");
 
-        if (dbTasks[index][2] === true) {
-            taskCheck.classList.toggle("clicked");
-            taskName.classList.toggle("finish");
-        }
-    
-        taskCheck.onclick = () => {
-            taskCheck.classList.toggle("clicked");
-            taskName.classList.toggle("finish");
+        taskName.innerText = this.taskName;
 
-            console.log(taskCheck.classList[1]);
-            
-            if (taskCheck.classList[1] == "clicked") {
-                for (let index = 0; index < dbTasks.length; index++) {
-                    if (taskComp === dbTasks[index][0]) {
-                        dbTasks[index][2] = true;
-                    }
-                }
-                loadTasksStats();
-            } else {
-                for (let index = 0; index < dbTasks.length; index++) {
-                    if (taskComp === dbTasks[index][0]) {
-                        dbTasks[index][2] = false;
-                    }
-                }
-                loadTasksStats();
-            }
-            localStorage.dbtasks = JSON.stringify(dbTasks);
-        };
-    
-        taskName.innerHTML = dbTasks[index][1];
-    
         task.appendChild(taskName);
         task.appendChild(taskCheck);
+
         tasksContainer.appendChild(task);
-        taskCount++
-        loadTasksStats();
+    }
+};
+
+// save and load in bdTasks
+
+let dbTasks = [];
+
+if (localStorage.dbtasks) {
+    dbTasks = JSON.parse(localStorage.dbtasks);
+};
+
+document.body.onload = () => {
+    for (let index = 0; index < dbTasks.length; index++) {
+        const task = new Task(dbTasks[index][0], dbTasks[index][1]);
+
+        task.createTask();
+        console.log(dbTasks[index][0], dbTasks[index][1]);
     };
 };
 
-// menu btns
-
-const openBtnsMenu = document.querySelector(".open-btns-menu");
-
-openBtnsMenu.addEventListener("click", () => {
-    const btnsContainer = document.querySelector(".btns-container");
-
-    setTimeout(() => {
-        if (btnsContainer.classList[1] == "open") {
-            openBtnsMenu.innerText = "CLOSE";
-        } else {
-            openBtnsMenu.innerText = "OPEN";
-        };
-    }, 100);
-
-    btnsContainer.classList.toggle("open");
-});
+// open and close tasks-modal
 
 const tasksModal = document.querySelector(".tasks-modal");
-const openTaskModal = document.querySelector(".open-modal");
-const closeTaskModal = document.querySelector(".close-modal");
+const openTasksModal = document.querySelector(".open-tasks-modal");
 
-openTaskModal.addEventListener('click', () => {
-    tasksModal.showModal();
+openTasksModal.addEventListener('click', () => {
+    tasksModal.classList.toggle("open");
+    console.log(tasksModal.classList);
+
+    setTimeout(() => {
+        if (tasksModal.classList[1] == "open") {
+            console.log("ok");
+            openTasksModal.innerText = "X"
+        } else {
+            openTasksModal.innerText = "Tasks"
+        }
+    }, 500);
 });
 
-closeTaskModal.addEventListener('click', () => {
-    tasksModal.close();
-});
-
-// create and save task
+// create tasks and save in dbTasks
 
 createTaskBtn.addEventListener('click', () => {
-    if (taskNameInp.value == "") {
-        alert("Error!")
+    const taskNameInp = document.querySelector("#task-name").value;
+    const taskType = document.querySelector("#task-type").value;
+
+    const task = new Task(taskNameInp, taskType);
+
+    if (taskNameInp == "") {
+        alert("preencha o campo");
     } else {
-        const task = document.createElement('div');
-        const taskName = document.createElement('p');
-        const taskCheck = document.createElement('span');
-        let taskComp = taskCount + 1
-
-        task.classList.add("task");
-        taskName.classList.add("task-name");
-        taskCheck.classList.add("task-check");
-
-        taskCheck.onclick = () => {
-            taskCheck.classList.toggle("clicked");
-            taskName.classList.toggle("finish");
-
-            if (taskCheck.classList[1] == "clicked") {
-                for (let index = 0; index < dbTasks.length; index++) {
-                    if (taskComp === dbTasks[index][0]) {
-                        dbTasks[index][2] = true;
-                    }
-                }
-                loadTasksStats();
-            } else {
-                for (let index = 0; index < dbTasks.length; index++) {
-                    if (taskComp === dbTasks[index][0]) {
-                        dbTasks[index][2] = false;
-                    }
-                }
-                loadTasksStats();
-            }
-            localStorage.dbtasks = JSON.stringify(dbTasks);
-        };
-
-        taskName.innerHTML = taskNameInp.value;
-
-        task.appendChild(taskName);
-        task.appendChild(taskCheck);
-        taskCount++;
-        loadTasksStats();
-        tasksContainer.appendChild(task);
-        let temp = [taskCount, taskNameInp.value, taskStatus];
+        let temp = [taskNameInp, taskType];
         dbTasks.push(temp);
+        task.createTask(taskNameInp, taskType);
         localStorage.dbtasks = JSON.stringify(dbTasks);
         taskNameInp.value = "";
     };
 });
 
-// remove tasks 
+// remove tasks
 
-const removeTasksBtn = document.querySelector(".remove-task-menu");
+const openRTModal = document.querySelector(".open-rt-modal");
 
-removeTasksBtn.addEventListener('click', () => {
+openRTModal.addEventListener('click', () => {
     for (let index = 0; index < dbTasks.length; index++) {
         tasksContainer.removeChild(tasksContainer.firstElementChild);
     };
-    dbTasks = [];
+
     localStorage.dbtasks = "";
-    taskCount = 0
-    loadTasksStats();
+    dbTasks = [];
 });

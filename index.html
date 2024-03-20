@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=7">
@@ -8,41 +9,51 @@
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/index.js"></script>
     <title>Revivel</title>
+
 </head>
-<body onload="loadTasks()">
-    <header class="header-container">
-        <h1>DAYLE QUESTS</h1>
-        <span class="tasks-stats">
-            <p class="tasks-stats-data">0 / 0</p>
-        </span>
-    </header>
+<body>
+    <main>
+        <header class="header-container">
+            <h1 class="page-title">olá, (user)</h1>
+            <span class="open-progress-modal">
+                <p class="today">1</p>
+            </span>
+        </header>
+        
+        <aside class="user-purpose">
+            " A busca pela excelência deve ser um hábito, não um objetivo. "
+        </aside>
 
-    <main class="tasks-container"></main>
+        <hr>
 
-    <dialog class="tasks-modal">
-        <button class="close-modal">X</button>
-        <div class="tasks-inp-container">
-            <div class="tasks-ipts">
-                <input type="text" name="task-name" class="task-name-inp" placeholder="Task Name">
-            </div>
-            <div class="tasks-btns">
-                <button type="button" class="create-task-btn">Create Task</button>
-            </div>
+        <div class="tasks-modal">
+            <button class="open-tasks-modal">Tasks</button>
+            <button class="edit-task-btn modal-btns">edit</button>
+            <button class="open-rt-modal modal-btns">remove</button>
+
+            <section class="tasks-container">
+                <div class="add-task">
+                    <h1>criar tarefa</h1>
+                    <input type="text" name="task-name" id="task-name" placeholder="Task Name">
+                    <select name="task-type" id="task-type">
+                        <option value="habit">Habit</option>
+                        <option value="objective">Objective</option>
+                    </select>
+                    <button class="create-task-btn">Create</button>
+                </div>
+
+                <hr>
+
+                <div class="tasks"></div>
+            </section>
         </div>
-    </dialog>
-
-    <aside class="btns-container">
-        <button class="open-btns-menu">OPEN</button>
-        <button class="btns open-modal">CREATE</button>
-        <button class="btns edit-task-btn">EDIT</button>
-        <button class="btns remove-task-menu">REMOVE</button>
-    </aside>
-
+    </main>
+    
     <menu class="nav-menu">
         <ul class="nav-list">
-            <li><a href="" class="goal-page">GOAL</a></li>
-            <li><a href="" class="home-page">HOME</a></li>
-            <li><a href="" class="user-page">USER</a></li>
+            <li><a href="#" class="goal-page">GOAL</a></li>
+            <li><a href="#" class="home-page">HOME</a></li>
+            <li><a href="#" class="user-page">USER</a></li>
         </ul>
     </menu>
 </body>

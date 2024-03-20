@@ -1,8 +1,9 @@
 @charset "UTF-8";
 
 :root {
-    --bg-color: #2d2d2d;
-    --bg-color2: #3c3c3c;
+    --bg-color: #462e4f;
+    --bg-color2: #60416b;
+    --hover-color: #503a5d;
 }
 
 * {
@@ -22,7 +23,8 @@ ul, li, a {
     bottom: 0;
 
     height: 10%;
-    background: var(--bg-color);
+    border-radius: 15px 15px 0 0;
+    background: var(--bg-color2);
 }
 
 .nav-list {
@@ -30,7 +32,6 @@ ul, li, a {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: solid 6px var(--bg-color3);
 }
 
 .nav-list li {
@@ -44,10 +45,11 @@ ul, li, a {
     height: 100%;
     width: 100%;
     text-align: center;
-    padding-top: calc(5vh / 2);
+    padding-top: 3vh;
     font: bold .9rem Arial;
 }
 
 .nav-list a:hover {
-    background: var(--bg-color3);
+    background: var(--hover-color);
+    border-radius: 15px 15px 0 0;
 }

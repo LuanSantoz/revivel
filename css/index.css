@@ -1,36 +1,24 @@
 @charset "UTF-8";
 
-:root {
-    --bg-color2: #2d2d2d;
-    --bg-color: #3e3e3e;
-    --bg-color3: #4f4f4f;
-    --bg-color4: #9f9f9f;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font: normal 1.1rem Arial, Verdana, sans-serif;
-}
-
-ul, li, a {
-    text-decoration: none;
-    list-style: none;
-    color: #fff;
+    font: normal 1rem Arial;
 }
 
 button {
-    height: 30px;
-    font: bold .7rem Arial;
-    letter-spacing: .06rem;
-    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 60px;
+    width: 60px;
     background: var(--bg-color2);
-    text-shadow: 2px 2px 5px #00000088;
     border: none;
-    border-radius: 5px;
+    color: #fff;
+    border-radius: 50%;
     cursor: pointer;
-    padding: 0 5px;
 }
 
 body {
@@ -40,69 +28,227 @@ body {
     overflow: hidden;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    height: 89vh;
+    padding: 0 20px;
+    margin: auto;
+    overflow: auto;
+}
 
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    height: 12%;
-    padding: 0 20px;
+    height: 15%;
 }
 
-.header-container h1 {
-    font: bolder 1.2rem cursive;
-    letter-spacing: .2rem;
-    text-shadow: 5px 5px 10px #00000066;
+.page-title {
+    font: bold 1.4rem verdana;
+    letter-spacing: .15rem;
+    text-transform: uppercase;
+    text-shadow: 5px 5px 5px #00000044;
 }
 
-.tasks-stats {
+.open-progress-modal {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
-    height: 50px;
-    width: 60px;
-    border: solid;
+    height: 40px;
+    width: 50px;
+    border: solid 2px #ffffffaa;
     border-radius: 50%;
-    box-shadow: 0 0 19px 5px #ffffff66;
+    cursor: pointer;
+}
+
+.user-purpose {
+    display: flex;
+    align-items: flex-start;
+
+    height: 12%;
+    text-align: center;
+    font: bolder 1.1rem Arial;
+    text-shadow: 2px 2px 10px #00000066;
+    letter-spacing: .05rem;
+}
+
+hr {
+    margin: 10px -5px;
+    border: solid 1px #ffffff66;
+}
+
+/* task-modal, task-container and modal-btns */
+
+.tasks-modal {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    height: 22vh;
+    width: 100vw;
+    background: transparent;
+    transition: 0s .6s;
+}
+
+.tasks-modal.open {
+    height: 100vh;
+    background: #00000066;
+    transition: 0s;
+}
+
+.open-tasks-modal {
+    position: absolute;
+    left: 5px;
+    bottom: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 60px;
+    width: 60px;
+    background: var(--bg-color2);
+    border: none;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+
+    transition: .3s .3s;
+}
+
+.tasks-modal.open .open-tasks-modal {
+    bottom: 90vh;
+    transition: .3s;
+}
+
+.modal-btns {
+    position: absolute;
+    left: 5px;
+    bottom: 90vh;
+
+    visibility: hidden;
+
+    transition: .3s;
+}
+
+.tasks-modal.open .edit-task-btn {
+    left: calc(100vw - 75vw);
+    visibility: visible;
+
+    transition: .3s .3s;
+}
+
+.tasks-modal.open .open-rt-modal {
+    left: calc(100vw - 50vw);
+    visibility: visible;
+
+    transition: .3s .4s;
 }
 
 .tasks-container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    height: 0vh;
+    width: 100vw;
+    background: var(--bg-color);
+    border-radius: 15px 15px 0 0;
+    z-index: 2;
+
+    transition: .3s .3s;
+}
+
+.tasks-modal.open .tasks-container {
+    height: 88vh;
+    transition: .3s;
+}
+
+.add-task {
+    height: 25%;
+    padding: 10px;
+    visibility: hidden;
+}
+
+.add-task h1 {
+    font: bolder 1.1rem Arial;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    margin: 5px 0;
+}
+
+#task-name {
+    height: 25px;
+    width: 85%;
+    padding: 0 10px;
+    margin-right: 10px;
+    font: normal 1rem cursive;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
+#task-type {
+    height: 25px;
+    width: 5vw;
+    border: none;
+    outline: none;
+}
+
+.create-task-btn {
+    position: relative;
+    top: 10px;
+
+    height: 40px;
+    width: 80px;
+    margin: auto;
+    border-radius: 15px;
+}
+
+.tasks {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    gap: .8rem;
+    justify-content: flex-start;
+    gap: 1rem;
 
-    height: 60%;
-    width: 90%;
-    padding: 20px 0;
-    margin: auto;
-    background: var(--bg-color3);
-    border-radius: 20px;
-    box-shadow: 0 0 20px 10px #00000066;
+    height: 75%;
+    padding: 10px 0;
+    visibility: hidden;
     overflow: auto;
+}
+
+.tasks-modal.open .add-task {
+    visibility: visible;
+}
+
+.tasks-modal.open .tasks {
+    visibility: visible;
 }
 
 .task {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex: 0 0 auto;
+    flex: 0 0 10vh;
 
-    height: 50px;
-    width: 95%;
-    padding: 0 10px;
-    background: var(--bg-color);
-    border-right: solid;
-    border-bottom: solid;
-    box-shadow: 5px 5px 10px 5px #00000066;
+    width: 90%;
+    background: var(--bg-color2);
+    padding: 0 15px;
     border-radius: 10px;
+    color: #fff;
 }
 
-.task-name {
-    text-shadow: 5px 5px 10px #000000aa;
+.taskName {
+    font: bolder 1.3rem Arial;
+    letter-spacing: .2rem;
+
 }
 
 .task-check {
@@ -111,136 +257,4 @@ body {
     background: #fff;
     border-radius: 50%;
     cursor: pointer;
-}
-
-.task-check.clicked {
-    background: var(--bg-color4);
-}
-
-.task-name.finish {
-    text-decoration: line-through;
-    color: var(--bg-color4);
-}
-
-@keyframes close-menu {
-
-    100% {
-        width: 70px;
-        border: inset 2px #888;
-    }
-}
-
-.btns-container {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    gap: .6rem;
-
-    height: 45px;
-    margin-top: 20px;
-    border-radius: 20px;
-    box-shadow: 10px 2px 10px 5px #00000088;
-
-    overflow: hidden;
-    animation: close-menu .2s forwards;
-}
-
-.open-btns-menu {
-    height: 30px;
-    margin-left: 10px;
-}
-
-@keyframes hidden-btns {
-    0% {
-        visibility: visible;
-    }
-
-    100% {
-        flex: 1 2 60px;
-        visibility: hidden;
-    }
-}
-
-.btns {
-    height: 30px;
-
-    animation: hidden-btns .4s forwards;
-}
-
-@keyframes open-menu {
-
-    100% {
-        width: 100vw;
-        border: outset 2px #888;
-    }
-}
-
-.btns-container.open {
-    animation: open-menu .4s forwards;
-}
-
-@keyframes show-btns {
-    0% {
-        visibility: hidden;
-    }
-
-    100% {
-        flex: 1 2 60px;
-        visibility: visible;
-    }
-}
-
-.btns-container.open .btns {
-    animation: show-btns .4s forwards;
-}
-
-.tasks-modal {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-
-    height: 150px;
-    width: 260px;
-    background: var(--bg-color2);
-    border: none;
-    border-radius: 10px;
-
-    transform: translate(-50%);
-}
-
-::backdrop {
-    background-color: #00000066;
-}
-
-.close-modal{
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    height: 25px;
-    width: 30px;
-}
-
-.tasks-inp-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-
-    height: 100%;
-}
-
-.tasks-inps {
-    display: flex;
-    flex-direction: column;
-}
-
-.task-name-inp {
-    height: 34px;
-    width: 90%;
-    outline: none;
-    padding: 10px;
-    border-radius: 10px;
 }
