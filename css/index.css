@@ -21,9 +21,8 @@ button {
   cursor: pointer;
 }
 
-html, body {
-  height: 90vh;
-  border: solid;
+body {
+  height: 98vh;
   background: var(--bg-color);
   color: #fff;
 }
