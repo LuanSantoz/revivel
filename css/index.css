@@ -1,31 +1,30 @@
 @charset "UTF-8";
 
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font: normal 1rem Arial;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: normal 1rem Arial;
 }
 
 button {
-display: flex;
-align-items: center;
-justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-height: 50px;
-width: 65px;
-background: var(--bg-color2);
-border: none;
-color: #fff;
-border-radius: 50%;
-cursor: pointer;
+  height: 50px;
+  width: 65px;
+  background: var(--bg-color2);
+  border: none;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 body {
   height: 100vh;
   background: var(--bg-color);
   color: #fff;
-  overflow: hidden;
 }
 
 main {
@@ -33,7 +32,7 @@ main {
   flex-direction: column;
   justify-content: flex-start;
 
-  height: 89vh;
+  height: 89%;
   padding: 0 20px;
   margin: auto;
   overflow: hidden;
@@ -146,24 +145,26 @@ hr {
   left: 0;
   bottom: 0;
 
-  height: 0vh;
+  height: 0;
   width: 100vw;
   background: var(--bg-color);
   border-radius: 15px 15px 0 0;
+  overflow: hidden;
+  visibility: hidden;
   z-index: 2;
 
-  transition: .3s .3s;
+  transition: .2s .3s;
 }
 
 .tasks-modal.open .tasks-container {
   height: 88vh;
+  visibility: visible;
   transition: .3s;
 }
 
 .add-task {
   height: 24%;
   padding: 10px;
-  visibility: hidden;
 }
 
 .add-task h1 {
@@ -200,7 +201,7 @@ hr {
 }
 
 .tasks-container hr {
-  visibility: hidden;
+  visibility: visible;
 }
 
 .tasks {
@@ -212,7 +213,6 @@ hr {
 
   height: 75%;
   padding: 10px 0;
-  visibility: hidden;
   overflow: auto;
 }
 
@@ -221,10 +221,6 @@ hr {
 }
 
 .tasks-modal.open .tasks-container hr {
-  visibility: visible;
-}
-
-.tasks-modal.open .tasks {
   visibility: visible;
 }
 
