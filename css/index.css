@@ -22,10 +22,9 @@ button {
 }
 
 body {
-  height: 100vh;
+  height: 96vh;
   background: var(--bg-color);
   color: #fff;
-  overflow: hidden;
 }
 
 main {
@@ -158,7 +157,7 @@ hr {
 }
 
 .tasks-modal.open .tasks-container {
-  height: 88vh;
+  height: 88%;
   visibility: visible;
   transition: .3s;
 }
