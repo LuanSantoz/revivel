@@ -12,8 +12,8 @@ display: flex;
 align-items: center;
 justify-content: center;
 
-height: 60px;
-width: 60px;
+height: 50px;
+width: 65px;
 background: var(--bg-color2);
 border: none;
 color: #fff;
@@ -48,7 +48,7 @@ main {
 }
 
 .page-title {
-  font: bold 1.4rem verdana;
+  font: bolder 1.4rem verdana;
   letter-spacing: .15rem;
   text-transform: uppercase;
   text-shadow: 5px 5px 5px #00000044;
@@ -69,10 +69,11 @@ main {
 .user-purpose {
   display: flex;
   align-items: flex-start;
+  justify-content: center;
 
-  height: 12%;
+  padding: 10px 0;
   text-align: center;
-  font: bolder 1.1rem Arial;
+  font: bolder 1rem Arial;
   text-shadow: 2px 2px 10px #00000066;
   letter-spacing: .05rem;
 }
@@ -89,10 +90,8 @@ hr {
   left: 0;
   bottom: 0;
   
-  height: 22vh;
+  height: 0;
   width: 100vw;
-  background: transparent;
-  overflow: hidden;
   transition: 0s .6s;
 }
 
@@ -104,34 +103,23 @@ hr {
 
 .open-tasks-modal {
   position: absolute;
-  left: 4%;
-  bottom: 12vh;
+  left: 10px;
+  bottom: calc(10px + 10vh);
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  height: 60px;
-  width: 60px;
-  background: var(--bg-color2);
-  border: none;
-  color: #fff;
-  border-radius: 50%;
-  cursor: pointer;
   z-index: 1;
 
   transition: .3s .3s;
 }
 
 .tasks-modal.open .open-tasks-modal {
-  left: 4%;
+  left: 10px;
   bottom: 90vh;
   transition: .3s;
 }
 
 .modal-btns {
   position: absolute;
-  left: 4%;
+  left: 10px;
   bottom: 90vh;
 
   visibility: hidden;
@@ -140,14 +128,14 @@ hr {
 }
 
 .tasks-modal.open .edit-task-btn {
-  left: 25%;
+  left: 90px;
   visibility: visible;
 
   transition: .3s .3s;
 }
 
 .tasks-modal.open .open-rt-modal {
-  left: 45%;
+  left: 170px;
   visibility: visible;
 
   transition: .3s .4s;
@@ -173,7 +161,7 @@ hr {
 }
 
 .add-task {
-  height: 25%;
+  height: 24%;
   padding: 10px;
   visibility: hidden;
 }
@@ -181,15 +169,16 @@ hr {
 .add-task h1 {
   font: bolder 1.1rem Arial;
   letter-spacing: .1rem;
+  text-align: center;
   text-transform: uppercase;
-  margin: 10px 0;
+  margin: 2px 0;
 }
 
 #task-name {
   height: 30px;
   width: 85%;
   padding: 0 10px;
-  margin: 10px 10px;
+  margin: 10px;
   font: normal 1rem cursive;
   border: none;
   outline: none;
@@ -204,9 +193,6 @@ hr {
 }
 
 .create-task-btn {
-  position: relative;
-  top: 10px;
-
   height: 40px;
   width: 80px;
   margin: auto;

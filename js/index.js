@@ -39,7 +39,6 @@ document.body.onload = () => {
         const task = new Task(dbTasks[index][0], dbTasks[index][1]);
 
         task.createTask();
-        console.log(dbTasks[index][0], dbTasks[index][1]);
     };
 };
 
@@ -50,11 +49,9 @@ const openTasksModal = document.querySelector(".open-tasks-modal");
 
 openTasksModal.addEventListener('click', () => {
     tasksModal.classList.toggle("open");
-    console.log(tasksModal.classList);
 
     setTimeout(() => {
         if (tasksModal.classList[1] == "open") {
-            console.log("ok");
             openTasksModal.innerText = "X"
         } else {
             openTasksModal.innerText = "Tasks"
@@ -65,19 +62,19 @@ openTasksModal.addEventListener('click', () => {
 // create tasks and save in dbTasks
 
 createTaskBtn.addEventListener('click', () => {
-    const taskNameInp = document.querySelector("#task-name").value;
+    const taskInp = document.querySelector("#task-name");
     const taskType = document.querySelector("#task-type").value;
 
-    const task = new Task(taskNameInp, taskType);
+    const task = new Task(taskInp.value, taskType);
 
-    if (taskNameInp == "") {
+    if (taskInp == "") {
         alert("preencha o campo");
     } else {
-        let temp = [taskNameInp, taskType];
+        let temp = [taskInp.value, taskType];
         dbTasks.push(temp);
-        task.createTask(taskNameInp, taskType);
+        task.createTask();
         localStorage.dbtasks = JSON.stringify(dbTasks);
-        taskNameInp.value = "";
+        taskInp.value = "";
     };
 });
 
