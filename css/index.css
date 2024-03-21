@@ -22,9 +22,10 @@ button {
 }
 
 body {
-  height: 98vh;
+  height: 100vh;
   background: var(--bg-color);
   color: #fff;
+  overflow: hidden;
 }
 
 main {
