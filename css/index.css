@@ -22,7 +22,7 @@ button {
 }
 
 body {
-  height: 100vh;
+  height: 98vh;
   background: var(--bg-color);
   color: #fff;
 }
