@@ -19,9 +19,10 @@ a, ul, li {
 }
 
 .nav-bar {
-  flex: 1 1 10vh;
+  flex: 1 1 8vh;
   background: #fff;
   border-radius: 15px 15px 0 0;
+  box-shadow: 0 5px 10px 15px #00000022;
 }
 
 .nav-list {
@@ -42,9 +43,12 @@ a, ul, li {
   height: 100%;
   font: 700 1.1rem Arial;
   text-transform: uppercase;
+  text-shadow: 3px 3px 10px #00000065;
 }
 
 .page:hover {
   background: var(--hover-color);
   color: #fff;
+  font-size: 1.3rem;
+  text-shadow: 6px 6px 10px #00000065;
 }

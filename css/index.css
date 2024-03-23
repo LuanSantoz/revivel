@@ -87,7 +87,7 @@ main {
 /* tasks container */
 
 .tasks-container {
-  height: 54%;
+  height: 52%;
   width: 94%;
   margin: auto;
   background: #fff;
@@ -103,6 +103,7 @@ main {
   gap: 2rem;
 
   height: 8%;
+  margin-top: 4px;
 }
 
 .btns {
