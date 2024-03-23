@@ -1,58 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=7">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script defer src="js/index.js"></script>
-    <title>Revivel</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=7">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/nav-bar.css">
+  <title>Revivel</title>
 </head>
 <body>
-    <main>
-        <header class="header-container">
-            <h1 class="page-title">olá, Luan!</h1>
-            <span class="open-progress-modal">
-                <p class="today">1</p>
-            </span>
-        </header>
-        
-        <aside class="user-purpose">
-            " A busca pela excelência deve ser um hábito, não um objetivo. "
-        </aside>
+  <main>
+    <header class="header container">
+      <h1 class="page-title">OLÁ, LUAN</h1>
+      <span class="open-progress-modal">
+        <p class="today">1</p>
+      </span>
+    </header>
 
-        <hr>
+    <aside class="stats-container">
+      <div class="total-stats stats">
+        <p class="stats-title">Total</p>
+        <p class="stats-data">0 / 0</p>
+      </div>
 
-        <div class="tasks-modal">
-            <button class="open-tasks-modal">tasks</button>
-            <button class="edit-task-btn modal-btns">edit</button>
-            <button class="open-rt-modal modal-btns">remove</button>
+      <div class="obg-stats stats">
+        <p class="stats-title">Total</p>
+        <p class="stats-data">0 / 0</p>
+      </div>
+    </aside>
 
-            <section class="tasks-container">
-                <div class="add-task">
-                    <h1>criar tarefa</h1>
-                    <input type="text" name="task-name" id="task-name" placeholder="Task Name">
-                    <select name="task-type" id="task-type">
-                        <option value="habit">Habit</option>
-                        <option value="objective">Objective</option>
-                    </select>
-                    <button class="create-task-btn">create</button>
-                </div>
+    <h1 class="tasks-title">ROTINA</h1>
 
-                <hr>
+    <section class="tasks-container">
+      <div class="hr"></div>
 
-                <div class="tasks"></div>
-            </section>
-        </div>
-    </main>
-    
-    <menu class="nav-menu">
-        <ul class="nav-list">
-            <li><a href="#" class="goal-page">GOAL</a></li>
-            <li><a href="#" class="home-page">HOME</a></li>
-            <li><a href="#" class="user-page">USER</a></li>
-        </ul>
+      <div class="tasks"></div>
+    </section>
+
+    <dialog class="create-tasks-modal">
+      <button class="close-ct-modal">X</button>
+
+      <div class="inp-container">
+
+      </div>
+
+      <div class="btn-container">
+        <button class="create-task-btn">create</button>
+      </div>
+    </dialog>
+
+    <menu class="btns-container">
+      <button class="open-btns-container btns">></button>
+      <button class="open-ct-modal btns">create</button>
+      <button class="remove-tasks-btn btns">remove</button>
+      <button class="edit-tasks-btn btns">edit</button>
     </menu>
+  </main>
+
+  <nav class="nav-bar">
+    <ul class="nav-list">
+      <li><a href="#" class="goal-page page">goal</a></li>
+      <li><a href="#" class="home-page page">home</a></li>
+      <li><a href="#" class="user-page page">user</a></li>
+    </ul>
+  </nav>
 </body>
 </html>

@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+:root {
+  --bg-color: #3f48cc;
+  --hover-color: #3f48ccaa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a, ul, li {
+  color: var(--bg-color);
+  list-style: none;
+  text-decoration: none;
+}
+
+.nav-bar {
+  flex: 1 1 10vh;
+  background: #fff;
+  border-radius: 15px 15px 0 0;
+}
+
+.nav-list {
+  display: flex;
+  height: 100%;
+}
+
+.nav-list li {
+  width: calc(100vw / 3);
+}
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  height: 100%;
+  font: 700 1.1rem Arial;
+  text-transform: uppercase;
+}
+
+.page:hover {
+  background: var(--hover-color);
+  color: #fff;
+}

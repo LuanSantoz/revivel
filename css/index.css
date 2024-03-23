@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  height: 100vh;
+  background: var(--bg-color);
+  color: #fff;
+  font: normal 1rem Arial, verdana;
+}
+
+main {
+  flex: 9 1 90vh;
+}
