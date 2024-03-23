@@ -2,6 +2,7 @@
 
 :root {
   --bg-color: #3f48cc;
+  --font-color: #2b3a99;
   --hover-color: #3f48ccaa;
 }
 
@@ -12,7 +13,7 @@
 }
 
 a, ul, li {
-  color: var(--bg-color);
+  color: var(--font-color);
   list-style: none;
   text-decoration: none;
 }

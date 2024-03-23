@@ -12,4 +12,102 @@ body {
 
 main {
   flex: 9 1 90vh;
+  padding: 10px 15px 0;
+}
+
+/* header */
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 10%;
+}
+
+.page-title {
+  font: 700 1.2rem verdana;
+  letter-spacing: .14rem;
+  text-shadow: 5px 5px 10px #00000066;
+}
+
+.open-progress-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 40px;
+  width: 50px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.today {
+  font: 500 1.4rem Arial;
+  color: var(--font-color);
+}
+
+/* stats && task-title */
+
+.stats-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+
+  height: 20%;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  height: 80%;
+  flex: 0 1 130px;
+  background: #fff;
+  font: normal 1.2rem Arial;
+  color: var(--font-color);
+  border-radius: 10px;
+}
+
+.rutine-title {
+  display: flex;
+  align-items: center;
+
+  height: 8%;
+  font: 700 1.4rem Arial;
+  letter-spacing: .14rem;
+  text-shadow: 5px 5px 10px #00000066;
+}
+
+/* tasks container */
+
+.tasks-container {
+  height: 54%;
+  width: 94%;
+  margin: auto;
+  background: #fff;
+  border-radius: 10px;
+}
+
+/* btns */
+
+.btns-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+
+  height: 8%;
+}
+
+.btns {
+  flex: 0 1 60px;
+  height: 60%;
+  color: var(--font-color);
+  cursor: pointer;
 }
