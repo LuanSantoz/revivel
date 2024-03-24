@@ -184,7 +184,7 @@ main {
 .btns-container p {
   position: relative;
   left: 50px;
-  bottom: 4.8vh;
+  bottom: 30px;
 
   width: 150px;
   color: #ffffff88;
@@ -201,7 +201,7 @@ main {
 .btns {
   position: absolute;
   left: 0;
-  bottom: 9.4vh;
+  bottom: 57px;
 
   z-index: 1;
   visibility: hidden;
