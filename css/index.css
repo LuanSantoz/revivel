@@ -1,5 +1,15 @@
 @charset "UTF-8";
 
+button {
+  height: 5%;
+  width: 60px;
+  color: var(--font-color);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  visibility: visible;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -97,18 +107,46 @@ main {
 /* btns */
 
 .btns-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 2rem;
+  height: 6%;
+  width: 60px;
+  margin-top: 10px;
+}
 
-  height: 8%;
-  margin-top: 4px;
+.btns-container.menu-open {
+  width: 100%;
+}
+
+.open-btns-container {
+  position: absolute;
+  left: 5%;
+
+  z-index: 1;
 }
 
 .btns {
-  flex: 0 1 60px;
-  height: 60%;
-  color: var(--font-color);
-  cursor: pointer;
+  position: absolute;
+  left: 5%;
+
+  transition: .3s .2s;
+}
+
+.btns-container.menu-open .open-ct-modal {
+  visibility: visible;
+  left: 30%;
+
+  transition: .3s .3s;
+}
+
+.btns-container.menu-open .remove-tasks-btn {
+  visibility: visible;
+  left: 55%;
+
+  transition: .3s .5s;
+}
+
+.btns-container.menu-open .edit-tasks-btn {
+  visibility: visible;
+  left: 80%;
+
+  transition: .3s .7s;
 }
