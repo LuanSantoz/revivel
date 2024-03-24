@@ -1,6 +1,18 @@
 // var, class and functions
 
-// 
+// open create task modal
+
+const createTasksModal = document.querySelector(".create-tasks-modal");
+const openCTModal = document.querySelector(".open-ct-modal");
+const closeCTModal = document.querySelector(".close-ct-modal");
+
+openCTModal.addEventListener('click', () => {
+  createTasksModal.showModal();
+});
+
+closeCTModal.addEventListener('click', () => {
+  createTasksModal.close();
+});
 
 // open and close btns-contaier
 

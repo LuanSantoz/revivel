@@ -2,10 +2,10 @@
 
 button {
   height: 5%;
-  width: 60px;
+  width: 50px;
   color: var(--font-color);
   border: none;
-  border-radius: 10px;
+  border-radius: 50%;
   cursor: pointer;
   visibility: visible;
 }
@@ -132,21 +132,21 @@ main {
 
 .btns-container.menu-open .open-ct-modal {
   visibility: visible;
-  left: 30%;
+  left: 27%;
 
   transition: .3s .3s;
 }
 
 .btns-container.menu-open .remove-tasks-btn {
   visibility: visible;
-  left: 55%;
+  left: 50%;
 
   transition: .3s .5s;
 }
 
 .btns-container.menu-open .edit-tasks-btn {
   visibility: visible;
-  left: 80%;
+  left: 75%;
 
   transition: .3s .7s;
 }
