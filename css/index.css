@@ -101,8 +101,8 @@ main {
   top: 50%;
   left: 50%;
 
-  height: 200px;
-  width: 250px;
+  height: 40%;
+  width: 70%;
   background: var(--bg-color);
   color: #fff;
   border: none;
@@ -123,15 +123,15 @@ main {
   }
 
   100% {
-    width: 40px;
+    width: 7vh;
     border-radius: 50%;
   }
 }
 
 .btns-container {
-  height: 40px;
-  width: 40px;
-  margin-top: 8px;
+  height: 7vh;
+  width: 7vw;
+  margin-top: 1vh;
   background-color: #fff;
   border: solid 1px;
   box-shadow: 5px 5px 10px #00000066;
@@ -156,8 +156,8 @@ main {
 }
 
 .btns-container button {
-  height: 40px;
-  width: 40px;
+  height: 7vh;
+  width: 11.6vw;
   background: var(--bg-color);
   color: #fff;
   font: normal 1.5rem Arial;
@@ -183,10 +183,10 @@ main {
 
 .btns-container p {
   position: relative;
-  left: 50px;
-  bottom: 30px;
+  left: 15vw;
+  bottom: 5vh;
 
-  width: 150px;
+  width: 36vw;
   color: #ffffff88;
   font: normal 1.1rem Arial;
   text-transform: capitalize;
@@ -201,7 +201,7 @@ main {
 .btns {
   position: absolute;
   left: 0;
-  bottom: 50px;
+  bottom: 9vh;
 
   z-index: 1;
   visibility: hidden;
