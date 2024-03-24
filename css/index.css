@@ -131,7 +131,7 @@ main {
 .btns-container {
   height: 40px;
   width: 40px;
-  margin-top: 6px;
+  margin-top: 8px;
   background-color: #fff;
   border: solid 1px;
   box-shadow: 5px 5px 10px #00000066;
@@ -201,7 +201,7 @@ main {
 .btns {
   position: absolute;
   left: 0;
-  bottom: 57px;
+  bottom: 50px;
 
   z-index: 1;
   visibility: hidden;
