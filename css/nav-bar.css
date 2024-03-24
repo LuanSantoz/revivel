@@ -43,12 +43,12 @@ a, ul, li {
   height: 100%;
   font: 700 1.1rem Arial;
   text-transform: uppercase;
-  text-shadow: 3px 3px 10px #00000065;
+  text-shadow: 3px 3px 10px #00000044;
 }
 
 .page:hover {
   background: var(--hover-color);
   color: #fff;
   font-size: 1.3rem;
-  text-shadow: 6px 6px 10px #00000065;
+  text-shadow: 6px 6px 10px #00000044;
 }

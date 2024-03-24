@@ -42,19 +42,33 @@
       <button class="close-ct-modal">X</button>
 
       <div class="inp-container">
+        <label for="task-name-inp">Taréfa</label>
+        <input type="text" name="task-inp" id="task-name-inp" placeholder="Nome">
 
+        <label for="task-durantion">Duração</label>
+        <select name="task-inp" id="task-durantion">
+          <option value="1">1 hr</option>
+          <option value="2">2 hr</option>
+          <option value="3">3 hr</option>
+          <option value="4">4 hr</option>
+        </select>
+
+        <label for="task-type">Tipo</label>
+        <select name="task-inp" id="task-type">
+          <option value="hab">Hábito</option>
+          <option value="obj">Objetivo</option>
+        </select>
       </div>
 
-      <div class="btn-container">
-        <button class="create-task-btn">create</button>
-      </div>
+      <button class="create-task-btn">create</button>
     </dialog>
 
     <menu class="btns-container">
       <button class="open-btns-container">></button>
-      <button class="open-ct-modal btns">create</button>
-      <button class="remove-tasks-btn btns">remove</button>
-      <button class="edit-tasks-btn btns">edit</button>
+      <p>mostrar botões</p>
+      <button class="open-ct-modal btns">+</button>
+      <button class="remove-tasks-btn btns">-</button>
+      <button class="edit-tasks-btn btns">!</button>
     </menu>
   </main>
 
