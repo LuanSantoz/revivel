@@ -38,30 +38,32 @@
       <div class="tasks"></div>
     </section>
 
-    <dialog class="create-tasks-modal" open>
-      <button class="close-ct-modal">X</button>
+    <div class="ct-modal-backdrop">
+      <section class="create-tasks-modal">
+        <button class="close-ct-modal">X</button>
 
-      <div class="inp-container">
-        <label for="task-name-inp">Taréfa</label>
-        <input type="text" name="task-inp" id="task-name-inp" placeholder="Nome">
+        <div class="inp-container">
+          <label for="task-name-inp">Taréfa</label>
+          <input type="text" name="task-inp" id="task-name-inp" placeholder="Nome">
 
-        <label for="task-durantion">Duração</label>
-        <select name="task-inp" id="task-durantion">
-          <option value="1">1 hr</option>
-          <option value="2">2 hr</option>
-          <option value="3">3 hr</option>
-          <option value="4">4 hr</option>
-        </select>
+          <label for="task-durantion">Duração</label>
+          <select name="task-inp" id="task-durantion">
+            <option value="1">1 hr</option>
+            <option value="2">2 hr</option>
+            <option value="3">3 hr</option>
+            <option value="4">4 hr</option>
+          </select>
 
-        <label for="task-type">Tipo</label>
-        <select name="task-inp" id="task-type">
-          <option value="hab">Hábito</option>
-          <option value="obj">Objetivo</option>
-        </select>
-      </div>
+          <label for="task-type">Tipo</label>
+          <select name="task-inp" id="task-type">
+            <option value="hab">Hábito</option>
+            <option value="obj">Objetivo</option>
+          </select>
+        </div>
 
-      <button class="create-task-btn">create</button>
-    </dialog>
+        <button class="create-task-btn">create</button>
+      </section>
+    </div>
 
     <menu class="btns-container">
       <button class="open-btns-container">></button>

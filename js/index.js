@@ -2,16 +2,19 @@
 
 // open create task modal
 
+const cTModalBackdrop = document.querySelector(".ct-modal-backdrop");
 const createTasksModal = document.querySelector(".create-tasks-modal");
 const openCTModal = document.querySelector(".open-ct-modal");
 const closeCTModal = document.querySelector(".close-ct-modal");
 
 openCTModal.addEventListener('click', () => {
-  createTasksModal.showModal();
+  cTModalBackdrop.style.display = "block";
+  createTasksModal.classList.add("open-modal");
 });
 
 closeCTModal.addEventListener('click', () => {
-  createTasksModal.close();
+  cTModalBackdrop.style.display = "none";
+  createTasksModal.classList.remove("open-modal");
 });
 
 // open and close btns-contaier

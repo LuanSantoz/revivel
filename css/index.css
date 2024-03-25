@@ -96,32 +96,42 @@ main {
 
 /* create task modal */
 
+.ct-modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: none;
+
+  height: 100vh;
+  width: 100vw;
+  background: #00000066;
+}
+
 .create-tasks-modal {
   position: absolute;
   top: 50%;
   left: 50%;
 
-  display: flex;
+  display: none;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
 
   height: 40%;
-  width: 70%;
+  width: 80%;
   background: var(--bg-color);
   color: #fff;
   border: none;
   border-radius: 10px;
+  visibility: hidden;
 
   transform: translate(-50%, -50%);
 }
 
-::backdrop {
-  background: #00000088;
-}
-
 .close-ct-modal {
   position: relative;
-  left: 86%;
+  left: 42%;
 
   height: 10%;
   width: 14%;
@@ -132,6 +142,25 @@ main {
 
 .inp-container {
   height: 70%;
+  padding: 30px 10px;
+}
+
+#task-name-inp {
+  height: 20%;
+  width: 80%;
+  margin: auto;
+}
+
+.create-task-btn {
+  height: 5vh;
+  width: 20vw;
+}
+
+/* create tasks modal open */
+
+.create-tasks-modal.open-modal {
+  display: flex;
+  visibility: visible;
 }
 
 /* btns */
@@ -164,7 +193,7 @@ main {
 
 .btns-container p {
   position: absolute;
-  left: 17vw;
+  left: 18vw;
   
   font: normal 1.1rem Helvetica;
   color: #ffffff88;
