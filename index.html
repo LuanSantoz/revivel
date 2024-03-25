@@ -9,7 +9,7 @@
   <script defer src="js/index.js"></script>
   <title>Revivel</title>
 </head>
-<body>
+<body onload="loadTasks()">
   <main>
     <header class="header-container">
       <h1 class="page-title">OLÁ, LUAN!</h1>
@@ -32,11 +32,7 @@
 
     <h1 class="rutine-title">ROTINA</h1>
 
-    <section class="tasks-container">
-      <div class="hr"></div>
-
-      <div class="tasks"></div>
-    </section>
+    <section class="tasks-container"></section>
 
     <div class="ct-modal-backdrop">
       <section class="create-tasks-modal">

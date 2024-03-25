@@ -19,7 +19,7 @@ a, ul, li {
 }
 
 .nav-bar {
-  flex: 1 1 8vh;
+  flex: 0 0 8vh;
   background: #fff;
   border-radius: 15px 15px 0 0;
   box-shadow: 0 5px 10px 15px #00000022;
