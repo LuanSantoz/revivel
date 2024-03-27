@@ -3,8 +3,10 @@
 // salvar taréfas no localStorage
 // carregar taréfas existêntes no localStorage
 // remover taréfas
-
 // adicionar interação ao task-check e salvar dado junto a taréfa no localStorage
+// mostrar tasks-status em tempo real
+
+// 
 
 // batabase local
 
@@ -20,6 +22,24 @@ if (localStorage.dbtasks) {
 const tasksContainer = document.querySelector(".tasks-container");
 
 let countTasks = 0;
+let countTasksStats = 0;
+
+const loadTasksStats = () => {
+  const taskStats = document.querySelector(".total-stats");
+
+  countTasks = dbTasks.length;
+  countTasksStats = 0;
+
+  for (let index = 0; index < dbTasks.length; index++) {
+    if (dbTasks[index][2] == true) {
+      countTasksStats++
+    }
+  }
+
+  taskStats.innerText = `${countTasksStats} / ${countTasks}`;
+
+  console.log(countTasks);
+};
 
 class Tasks {
   constructor(index, duration, type, name, status=false) {
@@ -42,11 +62,38 @@ class Tasks {
       taskCheck.classList.toggle("checked");
 
       if (taskCheck.classList[1] == "checked") {
-        this.status = true
+        this.status = true;
+
+        for (let index = 0; index < dbTasks.length; index++) {
+          if (dbTasks[index][0] == this.index) {
+            dbTasks[index][2] = true;
+          }
+
+          localStorage.dbtasks = JSON.stringify(dbTasks);
+
+          loadTasksStats();
+        }
       } else {
         this.status = false
-      };
+
+        for (let index = 0; index < dbTasks.length; index++) {
+          if (dbTasks[index][0] == this.index) {
+            dbTasks[index][2] = false;
+          }
+
+          localStorage.dbtasks = JSON.stringify(dbTasks);
+
+          loadTasksStats();
+        };
+      }
+  
     });
+
+    if (this.status == true) {
+      taskCheck.classList.add("checked");
+    } else {
+      taskCheck.classList.remove("checked");
+    }
 
     taskName.innerText = this.name;
 
@@ -60,10 +107,11 @@ class Tasks {
 
 function loadTasks() {
   for (let index = 0; index < dbTasks.length; index++) {
-    console.log(countTasks);
     const task = new Tasks(dbTasks[index][0], 0, 0, dbTasks[index][1], dbTasks[index][2]);
 
     task.createTask();
+
+    loadTasksStats();
   }
 }
 
@@ -99,7 +147,8 @@ createTaskBtn.addEventListener('click', () => {
     let temp = [countTasks, taskNameInp.value, task.status];
     dbTasks.push(temp);
     localStorage.dbtasks = JSON.stringify(dbTasks)
-    countTasks++
+
+    loadTasksStats();
   }
 });
 
@@ -127,9 +176,11 @@ const removeTasksBtns = document.querySelector(".remove-tasks-btn");
 removeTasksBtns.addEventListener("click", () => {
   for (let index = 0; index < dbTasks.length; index++) {
     tasksContainer.removeChild(tasksContainer.firstElementChild)
-  }
+  };
 
   dbTasks = [];
-  countTasks = 0
+  countTasks = 0;
   localStorage.dbtasks = "";
+
+  loadTasksStats();
 });
