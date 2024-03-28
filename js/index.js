@@ -6,11 +6,20 @@
 // adicionar interação ao task-check e salvar dado junto a taréfa no localStorage
 // mostrar tasks-status em tempo real
 
-// 
+// salvar progresso diário e reiniciar tasks-checks, tasks-status...
+// criar progress-modal e mostrar progresso diário
+
+// mostrar task-info-modal ao clicar no task-name
+// adicionar remove-task-btn e edit-task-btn, e exibir em cima do task-info-modal
+// mostrar taréfa em aberto no tasks-container
+
+
+// criar class user e seus métodos - V1 update
 
 // batabase local
 
 let dbTasks = [];
+let dbProgress = [];
 
 if (localStorage.dbtasks) {
   dbTasks = JSON.parse(localStorage.dbtasks);
@@ -19,10 +28,18 @@ if (localStorage.dbtasks) {
 
 // var, class and functions
 
+const date = new Date();
 const tasksContainer = document.querySelector(".tasks-container");
 
 let countTasks = 0;
 let countTasksStats = 0;
+let today = date.getDate();
+
+const loadToday = () => {
+  const todayComp = document.querySelector(".today");
+
+  todayComp.innerText = today
+};
 
 const loadTasksStats = () => {
   const taskStats = document.querySelector(".total-stats");
@@ -103,14 +120,14 @@ class Tasks {
   };
 };
 
-// load tasks
+// load tasks and today
 
 function loadTasks() {
   for (let index = 0; index < dbTasks.length; index++) {
     const task = new Tasks(dbTasks[index][0], 0, 0, dbTasks[index][1], dbTasks[index][2]);
-
+    
     task.createTask();
-
+    loadToday();
     loadTasksStats();
   }
 }
@@ -130,6 +147,10 @@ openCTModal.addEventListener('click', () => {
 closeCTModal.addEventListener('click', () => {
   cTModalBackdrop.style.display = "none";
   createTasksModal.classList.remove("open-modal");
+});
+
+cTModalBackdrop.addEventListener('dblclick', () => {
+  console.log("ok");
 });
 
 // create and save tasks
