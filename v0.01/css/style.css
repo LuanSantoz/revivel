@@ -93,8 +93,8 @@ main {
 }
 
 .btns-menu button {
-  height: 45px;
-  width: 50px;
+  height: 50px;
+  width: 60px;
   background: var(--primary-color);
   color: var(--secondary-color);
   border: none;
@@ -107,9 +107,80 @@ main {
 }
 
 .btns-menu.active {
-  width: 50%;
+  width: 60%;
 }
 
 .btns-menu.active .bm-btns {
   display: block;
+}
+
+/*   modal para criar tarefas   */
+
+.create-task-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
+
+  height: 100%;
+  width: 100%;
+  background: var(--background-color);
+}
+
+.close-ct-modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  height: 2rem;
+  width: 2rem;
+}
+
+.create-task-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: .8rem;
+
+  height: 85%;
+  margin-top: 2rem;
+  padding: 10px;
+}
+
+.create-task-form h1 {
+  flex: 0 1 100%;
+
+  height: 10%;
+  text-align: center;
+}
+
+.task-name-inp {
+  flex: 0 1 80%;
+
+  height: 8%;
+  margin-right: 3%;
+}
+
+.task-color-inp {
+  flex: 0 1 13%;
+
+  height: 8%;
+  border-radius: 8px;
+}
+
+
+
+.sub-tasks-container {
+  display: none;
+}
+
+.create-task-btn {
+  position: relative;
+  left: 50%;
+
+  height: 2.2rem;
+  width: 8rem;
+
+  transform: translateX(-50%);
 }
