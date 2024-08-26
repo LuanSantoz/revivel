@@ -36,22 +36,16 @@
     <div class="create-task-form">
       <h1>adicionar tarefa</h1>
 
-      <input type="text" class="task-name-inp" placeholder="Nome da Tarefa">
+      <input type="text" class="task-name-inp" value="treino" placeholder="Nome da Tarefa">
       <input type="color" class="task-color-inp">
 
-      <label for="task-time">horário</label>
-      <select class="task-time">
+      <label for="task-time-inp">horário</label>
+      <select id="task-time-inp">
         <option value="all-day">dia todo</option>
         <option value="morning">manhã</option>
         <option value="afternom">tarde</option>
         <option value="nigth">noite</option>
       </select>
-
-      <h2>tipo de tarefa</h2>
-      <label for="simple">simples</label>
-      <input type="radio" name="task-type-inp" class="simple" value="simple" checked>
-      <label for="compost">composta</label>
-      <input type="radio" name="task-type-inp" class="compost" value="compost">
 
       <label for="task-goal-inp">condição</label>
       <select class="task-goal-inp">
@@ -61,26 +55,10 @@
         <option value="min">min</option>
         <option value="hr">hr</option>
       </select>
-      <input type="text" class="task-qnt-inp" placeholder="quantidades desejadas">
+      <input type="number" id="task-qnt-inp" value="30" placeholder="quantidades desejadas">
 
       <h2>anotações</h2>
-      <textarea class="task-anotation"></textarea>
-
-      <div class="sub-tasks-container">
-        <input type="text" class="sub-task-inp" placeholder="nome da sub-tarefas">
-
-        <label for="st-goal-inp">condição</label>
-        <select class="st-goal-inp">
-          <option value="simple" selected>simples</option>
-          <option value="reps">reps</option>
-          <option value="ass">assuntos</option>
-          <option value="min">min</option>
-          <option value="hr">hr</option>
-        </select>
-        <input type="text" class="st-qnt-inp" placeholder="quantidades desejadas">
-
-        <button class="add-sub-task">adicionar sub-tarefa</button>
-      </div>
+      <textarea class="task-anotation-inp" style="height: 40%; width: 100%;"></textarea>
     </div>
 
     <button class="create-task-btn">adicionar tarefa</button>
