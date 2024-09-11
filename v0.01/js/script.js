@@ -38,19 +38,24 @@ createTaskBtn.addEventListener('click', () => {
   const taskQntInp = document.querySelector("#task-qnt-inp").value;
   const taskAnotationInp = document.querySelector(".task-anotation-inp");
 
-  const task = document.createElement("div");
-  const taskInfo = document.createElement("p");
-  const taskCheck = document.createElement("span");
+  if (taskNameInp == "") {
+    alert("preencha o campo para adicionar um nome a tarefa");
+  } else {
+    const task = document.createElement("div");
+    const taskInfo = document.createElement("p");
+    const taskCheck = document.createElement("span");
 
-  task.classList.add("task");
+    task.classList.add("task");
 
-  taskInfo.classList.add("task-info");
-  taskCheck.classList.add("task-check");
+    taskInfo.classList.add("task-info");
+    taskCheck.classList.add("task-check");
 
-  taskInfo.innerHTML = `<p>${taskNameInp}</p><p>${taskQntInp} ${taskGoalInp}.</p>`;
-  
+    taskInfo.innerHTML = `<p>${taskNameInp}</p><p>${taskQntInp} ${taskGoalInp}.</p>`;
+    taskInfo.firstElementChild.id = "task-name";
+    
 
-  task.appendChild(taskInfo);
-  task.appendChild(taskCheck);
-  taskList.appendChild(task);
+    task.appendChild(taskInfo);
+    task.appendChild(taskCheck);
+    taskList.appendChild(task);
+  }
 })

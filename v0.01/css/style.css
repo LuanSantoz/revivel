@@ -46,10 +46,10 @@ header {
   align-items: center;
 
   height: 10%;
-  overflow: auto hidden;
 }
 
 .task-nav-bar span {
+  flex: 0 1 auto;
   background: var(--secondary-color);
   font: 700 .9rem helvetica;
   text-transform: uppercase;
@@ -77,40 +77,50 @@ main {
   justify-content: flex-start;
 
   height: 100%;
+  overflow: hidden auto;
 }
 
 .task {
-  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 5em;
   width: 90%;
   background: var(--secondary-color);
   color: var(--primary-color);
-  margin: 5px 0;
-  padding: 0 10px;
+  margin: 10px 10px;
+  padding: 0 15px;
   border-radius: 15px;
 }
 
 .task-info {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
-
   height: 100%;
   width: 60%;
 }
 
+.task-info p {
+  height: 50%;
+}
+
+#task-name {
+  font: bolder 1.6rem Cursive;
+}
+
 .task-check {
-  height: 1.6em;
-  width: 1.6em;
+  height: 1.8em;
+  width: 1.8em;
   border: solid 2px var(--primary-color);
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 /*   menu de botões   */
 
 .btns-menu {
   position: fixed;
-  right: 10px;
-  bottom: 40px;
+  right: 2%;
+  bottom: 2%;
 
   display: flex;
   justify-content: flex-end;
@@ -138,7 +148,7 @@ main {
 }
 
 .btns-menu.active {
-  width: 60%;
+  width: 50%;
 }
 
 .btns-menu.active .bm-btns {
