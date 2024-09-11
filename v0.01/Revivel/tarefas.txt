@@ -1,0 +1,22 @@
+rotineira
+
+ casa
+
+  lavar banheiro
+  lavar roupas
+  tirar poeira dos movéis
+
+ pessoais
+
+  hidratar cabelo
+  fazer a barba
+  cortar o cabelo
+  depilação
+
+unicas
+
+ planejamento
+
+  registrar progresso dos objetivos e hábitos durante um período de 60 dias
+  separar tarefas rotineiras de tarefas unicas
+  criar rotina mensal para adicionar tarefas marcadas
