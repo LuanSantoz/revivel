@@ -33,34 +33,39 @@
     <button class="open-btns-menu">abrir menu</button>
   </menu>
 
-  <div class="create-task-modal">
+  <div class="create-task-modal" style="display: flex;">
     <button class="close-ct-modal">X</button>
 
-    <div class="create-task-form" style="display: flex;">
+    <div class="create-task-form">
       <h1>adicionar tarefa</h1>
 
-      <input type="text" class="task-name-inp" value="treino" placeholder="Nome da Tarefa">
+      <input type="text" class="task-name-inp" value="treino" placeholder="Inserir nome">
       <input type="color" class="task-color-inp">
 
       <label for="task-time-inp">horário</label>
       <select id="task-time-inp">
         <option value="all-day">dia todo</option>
         <option value="morning">manhã</option>
-        <option value="afternom">tarde</option>
+        <option value="afternoom">tarde</option>
         <option value="nigth">noite</option>
       </select>
 
-      <label for="task-goal-inp">tipo</label>
-      <select class="task-goal-inp">
+      <label for="task-type-inp">tipo</label>
+      <select id="task-type-inp">
         <option value="simples" selected>simples</option>
         <option value="reps">repetições</option>
         <option value="pags">páginas</option>
         <option value="temp">tempo</option>
         <option value="st">sub-tarefas</option>
       </select>
-      <input type="number" id="task-qnt-inp" style="display: none;" placeholder="Meta desejada">
-
       
+      <input type="number" id="task-goal-inp" placeholder="Meta desejada">
+
+      <div class="add-sub-tasks">
+        <input type="text" class="sub-task-name" placeholder="Inserir nome"/>
+        <button class="add-st-btn" type="submit">Adicionar sub-tarefa</button>
+        <ul class="sub-task-list"></ul>
+      </div>
 
       <h2>anotações</h2>
       <textarea class="task-anotation-inp" style="height: 40%; width: 100%;"></textarea>
