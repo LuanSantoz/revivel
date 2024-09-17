@@ -1,0 +1,20 @@
+Estrutura
+ nome: nome da tarefa.
+ tipo: simples, reps, assuntos, min, sub-tarefas.
+ meta: número pretendido de repetições, assuntos, tempo.
+ anotações: informações extra para a tarefa.
+
+ numero: ordem que a tarefa foi criada
+ cor
+ horário
+
+
+Ex de tarefas
+ acordar 5 hrs
+ beber agua, 0/8 reps
+ estudar, 3/6 assuntos
+ treinar, 2/3 sub-tarefas
+  alongamento
+  barra fixa 3x10, 30/30 reps
+  bicicleta, 20/30 min
+

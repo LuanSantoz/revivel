@@ -1,6 +1,6 @@
 // global
 
-const taskList = document.querySelector(".task-list");
+const monitor = document.querySelector(".monitor");
 
 // menu de botões
 
@@ -56,6 +56,18 @@ createTaskBtn.addEventListener('click', () => {
 
     task.appendChild(taskInfo);
     task.appendChild(taskCheck);
-    taskList.appendChild(task);
+    monitor.appendChild(task);
   }
 })
+
+/*
+  mostrar elementos escondidos de acordo com o valor de task-type
+  criar modelo de hábito
+    estrutura - nome, check, botão abrir menu de botões.
+      esc: meta/sub-tarefas, menu de botões(editar, apagar)
+    interação - completar hábito, abrir menu de botões, editar, apagar
+
+  criar divisões de horários e separar hábitos
+  criar um sistema de contagem de dias
+
+*/

@@ -1,0 +1,60 @@
+Objetivo do App: Auxiliar o usuário a alcançar objetivos e melhorar seus hábitos,
+  criando roadmaps para traçar caminhos que cheguem ao objetivo,
+  monitorar rotina e progresso.
+
+Funcionalidades Principais:
+ Roadmaps
+ Monitor de rotina.
+ Lista de tarefas.
+ Calendário.
+ Gráficos de progresso.
+ Notificações e lembretes.
+ Personalização de objetivos e hábitos.
+
+Estrutura
+
+Pagina principal
+
+  Cabeçalho
+    titulo da pagina
+    sequência
+    frase motivacional
+    
+  Barra de navegação
+    mostra os dias da semana atual, destacando o dia atual e mostrando brevemente o progresso dos dias anteriores.
+    
+    ao clicar, mostra progresso do dia no monitor de rotina, com o dia atual marcado como padrão
+  
+  Monitor de rotina
+    mostra a rotina planejada para cada dia selecionado na barra de navegação,
+    com habitos e metas para alcançar os objetivos, separando os por hórario.
+    
+  Menu de botões
+    botão de abrir e fechar Menu
+    botão de abrir modal de criar tarefa
+    botão de remover todas
+    
+  
+  Modais
+  
+  Adicionar tarefa
+    nome
+    horário - dia todo, manhã, tarde e noite
+    tipo - simples, meta e sub-tarefas
+    reperições - todo dia, dias na semana, unica
+    anotações
+    
+    botão para Adicionar tarefas caso as condicões sejam atendidas
+    
+    meta
+    sub-tarefas
+      nome
+      botão
+      lista de sub-tarefas
+    
+  caso seja:
+    meta - aparece um input para o usuário inserir a meta da tarefa
+    sub-tarefas - aparece o container para Adicionar sub-tarefas
+
+
+

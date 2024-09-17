@@ -10,18 +10,21 @@
 </head>
 <body>
   <header>
-    <h1 class="page-title">lista de tarefas</h1>
+    <h1 class="page-title">Monitor de Rotina</h1>
   </header>
 
-  <nav class="task-nav-bar">
-    <span class="all-day">dia todo</span>
-    <span class="morning">manhã</span>
-    <span class="afternom">tarde</span>
-    <span class="nigth">noite</span>
+  <nav class="dw-nav-bar">
+    <span id="sun" class="day-of-week">Dom</span>
+    <span id="mon" class="day-of-week">Seg</span>
+    <span id="tues" class="day-of-week">Ter</span>
+    <span id="wed" class="day-of-week">Qua</span>
+    <span id="thurs" class="day-of-week">Qui</span>
+    <span id="fri" class="day-of-week">Sex</span>
+    <span id="sat" class="day-of-week">Sab</span>
   </nav>
 
   <main>
-    <section class="task-list"></section>
+    <section class="monitor"></section>
   </main>
 
   <menu class="btns-menu">
@@ -33,7 +36,7 @@
   <div class="create-task-modal">
     <button class="close-ct-modal">X</button>
 
-    <div class="create-task-form">
+    <div class="create-task-form" style="display: flex;">
       <h1>adicionar tarefa</h1>
 
       <input type="text" class="task-name-inp" value="treino" placeholder="Nome da Tarefa">
@@ -47,15 +50,17 @@
         <option value="nigth">noite</option>
       </select>
 
-      <label for="task-goal-inp">condição</label>
+      <label for="task-goal-inp">tipo</label>
       <select class="task-goal-inp">
         <option value="simples" selected>simples</option>
-        <option value="reps">reps</option>
-        <option value="assuntos">assuntos</option>
-        <option value="min">min</option>
-        <option value="hr">hr</option>
+        <option value="reps">repetições</option>
+        <option value="pags">páginas</option>
+        <option value="temp">tempo</option>
+        <option value="st">sub-tarefas</option>
       </select>
-      <input type="number" id="task-qnt-inp" value="30" placeholder="quantidades desejadas">
+      <input type="number" id="task-qnt-inp" style="display: none;" placeholder="Meta desejada">
+
+      
 
       <h2>anotações</h2>
       <textarea class="task-anotation-inp" style="height: 40%; width: 100%;"></textarea>

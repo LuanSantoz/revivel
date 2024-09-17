@@ -1,0 +1,22 @@
+Estrutura
+
+ Cabeçalho: Titulo da página, tarefas feitas e retantes, texto motivacional(frases ou propósito)
+
+ Calendário Semanal: Exibe os dias da semana atual, com o dia atual selecionado por padrão,
+ esse elemento busca os dados de acordo com dia selecionado, mostrando brevemente o progresso dos dias passados
+
+ Monitor de rotina: Exibe tarefas ligadas a um hábito ou objetivo, separando por hórarios e tarefas que se
+ repetem varias vezes durante o dia, esse elemento carrega os dados de acordo com dia selecionado no 
+ calendário semanal
+
+ Menu de Botões: Menu com botões de Adicionar e remover tarefas
+
+ Modais:
+  Criar Tarefas: Fórmulario para criação de tarefas
+
+Implantação
+
+ Abrir e fechar menu de botões. v
+ Abrir e fechar modal de criar tarefas. v
+ Adicionar e remover tarefas
+  

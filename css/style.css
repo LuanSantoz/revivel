@@ -35,31 +35,29 @@ header {
   justify-content: center;
   align-items: center;
 
-  height: 8%;
+  height: 10%;
+  border: solid;
 }
 
 /*   barra de navegação das tarefas   */
 
-.task-nav-bar {
+.dw-nav-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  height: 10%;
+  height: 20%;
+  border: solid;
 }
 
-.task-nav-bar span {
-  flex: 0 1 auto;
+.dw-nav-bar span {
   background: var(--secondary-color);
   font: 700 .9rem helvetica;
   text-transform: uppercase;
-  padding: 5px 10px;
-  border-radius: 10px;
-  color: var(--primary-color);
   cursor: pointer;
 }
 
-.task-nav-bar span:hover {
+.dw-nav-bar span:hover {
   background: var(--primary-color);
   color: var(--secondary-color);
 }
@@ -70,7 +68,7 @@ main {
   height: 70%;
 }
 
-.task-list {
+.monitor {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,6 +76,7 @@ main {
 
   height: 100%;
   overflow: hidden auto;
+  border: solid;
 }
 
 .task {
@@ -85,7 +84,7 @@ main {
   align-items: center;
   justify-content: space-between;
 
-  height: 5em;
+  height: 6rem;
   width: 90%;
   background: var(--secondary-color);
   color: var(--primary-color);
@@ -162,7 +161,6 @@ main {
   top: 0;
   left: 0;
 
-  display: flex;
   flex-direction: column;
   align-items: center;
 
