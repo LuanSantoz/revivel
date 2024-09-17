@@ -210,9 +210,27 @@ main {
   border-radius: 8px;
 }
 
+#task-time-inp {
+  flex: 0 1 30%;
+  
+  height: 8%;
+}
 
+#task-type-inp {
+  flex: 0 1 30%;
+  
+  height: 8%;
+}
+
+#task-goal-inp {
+  display: none;
+}
+
+.add-sub-tasks {
+  display: none;
+}
 
 .create-task-btn {
   height: 2.2em;
   width: 8em;
-}
+  }
