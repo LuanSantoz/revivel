@@ -156,6 +156,23 @@ main {
 
 /*   modal para criar tarefas   */
 
+.create-task-form label {
+  display: flex;
+  align-items: center;
+
+  font: bold 1.5rem Arial;
+  padding-left: 10px;
+}
+
+.create-task-form input, select {
+  height: 10%;
+  font: bold 1rem sans-serif;
+  margin: 10px 0;
+  padding: 0 10px;
+  border: solid;
+  border-radius: 8px;
+}
+
 .create-task-modal {
   position: absolute;
   top: 0;
@@ -199,27 +216,34 @@ main {
 .task-name-inp {
   flex: 0 1 80%;
 
-  height: 8%;
   margin-right: 3%;
 }
 
 .task-color-inp {
-  flex: 0 1 13%;
+  flex: 0 1 15%;
 
-  height: 8%;
-  border-radius: 8px;
 }
 
+label[for="task-time-inp"] {
+  flex: 0 1 40%;
+} 
+
 #task-time-inp {
-  flex: 0 1 30%;
+  flex: 0 1 40%;
   
   height: 8%;
+  margin-left: 8%;
+}
+
+label[for="task-type-inp"] {
+  flex: 0 1 40%;
 }
 
 #task-type-inp {
-  flex: 0 1 30%;
+  flex: 0 1 40%;
   
   height: 8%;
+  margin-left: 8%;
 }
 
 #task-goal-inp {
@@ -228,6 +252,12 @@ main {
 
 .add-sub-tasks {
   display: none;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  flex: 0 1 100%;
 }
 
 .create-task-btn {

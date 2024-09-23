@@ -1,9 +1,14 @@
 Estrutura
 
- Cabeçalho: Titulo da página, tarefas feitas e retantes, texto motivacional(frases ou propósito)
+ Cabeçalho:
+   titulo da pagina
+   sequência
+   frase motivacional
 
- Calendário Semanal: Exibe os dias da semana atual, com o dia atual selecionado por padrão,
- esse elemento busca os dados de acordo com dia selecionado, mostrando brevemente o progresso dos dias passados
+ Barra de navegação
+   exibe os dias da semana atual, destacando o dia atual e mostrando brevemente o progresso dos dias anteriores.
+    
+   ao clicar, mostra progresso do dia no monitor de rotina, com o dia atual marcado como padrão
 
  Monitor de rotina: Exibe tarefas ligadas a um hábito ou objetivo, separando por hórarios e tarefas que se
  repetem varias vezes durante o dia, esse elemento carrega os dados de acordo com dia selecionado no 

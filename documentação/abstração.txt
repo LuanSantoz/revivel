@@ -16,14 +16,8 @@ Estrutura
 Pagina principal
 
   Cabeçalho
-    titulo da pagina
-    sequência
-    frase motivacional
     
-  Barra de navegação
-    mostra os dias da semana atual, destacando o dia atual e mostrando brevemente o progresso dos dias anteriores.
     
-    ao clicar, mostra progresso do dia no monitor de rotina, com o dia atual marcado como padrão
   
   Monitor de rotina
     mostra a rotina planejada para cada dia selecionado na barra de navegação,
