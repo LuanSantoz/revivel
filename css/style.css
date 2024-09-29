@@ -231,36 +231,25 @@ label[for="task-time-inp"] {
 #task-time-inp {
   flex: 0 1 40%;
   
-  height: 8%;
   margin-left: 8%;
 }
 
-label[for="task-type-inp"] {
+label[for="task-rep-inp"] {
   flex: 0 1 40%;
 }
 
-#task-type-inp {
+#task-rep-inp {
   flex: 0 1 40%;
-  
-  height: 8%;
   margin-left: 8%;
 }
 
-#task-goal-inp {
-  display: none;
-}
+
 
 .add-sub-tasks {
   display: none;
 }
 
-h2 {
-  display: flex;
-  justify-content: center;
-  flex: 0 1 100%;
-}
-
 .create-task-btn {
   height: 2.2em;
   width: 8em;
-  }
+    }
