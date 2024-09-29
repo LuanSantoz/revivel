@@ -50,29 +50,38 @@
         <option value="nigth">noite</option>
       </select>
 
-      <label for="task-type-inp">tipo</label>
-      <select id="task-type-inp">
-        <option value="simples" selected>simples</option>
-        <option value="reps">repetições</option>
-        <option value="pags">páginas</option>
-        <option value="temp">tempo</option>
-        <option value="st">sub-tarefas</option>
+      <label for="task-rep-inp">Frequência</label>
+      <select id="task-rep-inp">
+        <option value="day" selected>Diariamente</option>
+        <option value="week">Semanalmente</option>
+        <option value="only">Única</option>
       </select>
       
-      <input type="number" id="task-goal-inp" placeholder="Meta desejada">
+      <div class="add-goal-container">
+        <span class="add-goal-btn-container">
+          <button class="add-goal-btn" type="submit"></button>
+        </span>
+        
+        <select id="task-goal-container">
+          <option value="reps" selected>Repetições</option>
+          <option value="pags">Páginas</option>
+          <option value="hr">Hora</option>
+          <option value="min">Minuto</option>
+          <option value="km">kilometros</option>
+        </select>
+        <input type="number" id="task-goal-inp" placeholder="Meta desejada">
+      </div>
 
-      <div class="add-sub-tasks">
+      <div class="add-st-container">
         <input type="text" class="sub-task-name" placeholder="Inserir nome"/>
         <button class="add-st-btn" type="submit">Adicionar sub-tarefa</button>
         <ul class="sub-task-list"></ul>
       </div>
-
-      <h2>anotações</h2>
-      <textarea class="task-anotation-inp" style="height: 20%; width: 100%;"></textarea>
     </div>
 
     <button class="create-task-btn">adicionar tarefa</button>
   </div>
 
 </body>
-</html>
+  </html>
+  
