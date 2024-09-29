@@ -8,20 +8,43 @@ Estrutura
  Barra de navegação
    exibe os dias da semana atual, destacando o dia atual e mostrando brevemente o progresso dos dias anteriores.
     
-   ao clicar, mostra progresso do dia no monitor de rotina, com o dia atual marcado como padrão
+   ao clicar, mostra progresso do dia no monitor de rotina, com o dia atual marcado como padrão.
 
- Monitor de rotina: Exibe tarefas ligadas a um hábito ou objetivo, separando por hórarios e tarefas que se
- repetem varias vezes durante o dia, esse elemento carrega os dados de acordo com dia selecionado no 
- calendário semanal
+ Monitor de rotina: Exibe tarefas ligadas a um hábito ou objetivo, separando por hórarios e tarefas que se repetem varias vezes durante o dia, esse elemento carrega os dados de acordo com dia selecionado no calendário semanal.
 
- Menu de Botões: Menu com botões de Adicionar e remover tarefas
+ Menu de Botões: Menu com botões referentes as Tarefas
+   botão de Abrir e fechar menu
+   botão de Abrir modal para adicionar tatefa
+   botão de remover tarefas
 
  Modais:
-  Criar Tarefas: Fórmulario para criação de tarefas
+  Criar Tarefas: Fórmulario para Adicionar de tarefas
+    nome - input para adicionar nome a tarefa
+    horário - input para adicionar em qual horário deve ser realiza
+      dia todo, manhã, tarde e noite.
+    frequência - input para adicionar em que frequência realiza lá
+      diariamente, semanalmente, unica
+    
+    meta - div para adicionar meta caso necessário
+      tipo - repetições, páginas, hr, min, km
+      quantidade - input de acordo com o tipo de meta
+    
+    sub-tarefas - div para adicionar sub-tarefas caso necessário
+      nome
+      botão
+      lista de sub-tarefas
+    
+    anotações
+    
+    botão para Adicionar tarefas caso as condicões sejam atendidas
 
-Implantação
+Implementação
 
  Abrir e fechar menu de botões. v
- Abrir e fechar modal de criar tarefas. v
- Adicionar e remover tarefas
-  
+ Modal de criar tarefas. v
+   abrir e fechar modal
+   ativar e desativar div meta
+   ativar e desativar div sub-tarefas
+   Adicionar tarefas
+ 
+ 
