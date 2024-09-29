@@ -19,8 +19,8 @@ const openCTModal = document.querySelector(".open-ct-modal");
 const closeCTModal = document.querySelector(".close-ct-modal");
 const createTaskBtn = document.querySelector(".create-task-btn");
 
-const taskTypeInp = document.querySelector("#task-type-inp");
-const taskGoalInp = document.querySelector("#task-goal-inp");
+const addGoalContainer = document.querySelector(".add-goal-container");
+//const taskGoalInp = document.querySelector("#task-goal-inp");
 const addSTContainer = document.querySelector(".add-sub-tasks");
 
 openCTModal.addEventListener('click', () => {
@@ -31,25 +31,13 @@ closeCTModal.addEventListener('click', () => {
   createTaskModal.style.display = "none"
 });
 
-taskTypeInp.addEventListener("input", () => {
-  if (taskTypeInp.value == "simples") {
-    taskGoalInp.style.display = "none";
-    addSTContainer.style.display = "none";
-  } else if (taskTypeInp.value == "reps" || taskTypeInp.value == "pags" || taskTypeInp.value == "temp") {
-    taskGoalInp.style.display = "block";
-    addSTContainer.style.display = "none";
-  } else if (taskTypeInp.value == "st") {
-    taskGoalInp.style.display = "none";
-    addSTContainer.style.display = "block";
-  }
-});
-
 // criar tarefa
 
 createTaskBtn.addEventListener('click', () => {
   const taskNameInp = document.querySelector(".task-name-inp").value;
   const taskColorInp = document.querySelector(".task-color-inp").value;
   const taskTimeInp = document.querySelector("#task-time-inp").value;
+  const taskRepInp = document.querySelector("#task-rep-inp").value;
   const taskAnotationInp = document.querySelector(".task-anotation-inp");
 
   if (taskNameInp == "") {
@@ -86,3 +74,4 @@ createTaskBtn.addEventListener('click', () => {
   criar um sistema de contagem de dias
 
 */
+                                              
